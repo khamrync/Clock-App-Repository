@@ -20,11 +20,24 @@ let sydneyElement = document.querySelector(".sydney-time");
 sydneyElement.innerHTML = sydneyTime;
 
 //Current Date//
+let laElementDate = moment()
+    .tz("America/Los_Angeles")
+    .format(`MMMM Do YYYY`);
+
 let laDate = document.querySelector(".LA-date");
-laDate.innerHTML = moment().format(`MMMM Do YYYY`);
+laDate.innerHTML = laElementDate;
+
+let tokyoElementDate = moment()
+    .tz("Asia/Toyko")
+    .format(`MMMM Do YYYY`);
 
 let tokyoDate = document.querySelector(".tokyo-date");
-tokyoDate.innerHTML = moment().format(`MMMM Do YYYY`);
+tokyoDate.innerHTML = tokyoElementDate;
+
+let sydneyElementDate = moment()
+    .tz("Australia/Sydney")
+    .format(`MMMM Do YYYY`);
 
 let sydneyDate = document.querySelector(".sydney-date");
-sydneyDate.innerHTML = moment().format(`MMMM Do YYYY`);
+sydneyDate.innerHTML = sydneyElementDate;
+
