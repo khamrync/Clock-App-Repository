@@ -1,0 +1,70 @@
+body {
+    background-image: url("images/map-background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+container {
+    top: 40%;
+    left: 40%;
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+}
+
+#time-zone {
+    border-radius: 5px;
+    padding: 1px;
+    outline: none;
+    width: 85%;
+}
+
+h1 {
+   top: 0;
+   left: 50px;
+}
+
+.city1 {
+    font-size: x-large;
+}
+
+.LA-time {
+    font-size: x-large;
+    right: 5px;
+    position: absolute;
+}
+
+.LA-date {
+    font-size: small;
+}
+
+.city2 {
+    font-size: x-large;
+}
+
+.tokyo-time {
+    font-size: x-large;
+    right: 5px;
+    position: absolute;
+}
+
+.tokyo-date {
+    font-size: small;
+}
+
+.city3 {
+    font-size: x-large;
+}
+
+.sydney-time {
+    font-size: x-large;
+    right: 5px;
+    position: absolute;
+}
+
+.sydney-date {
+    font-size: small;
+}
