@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World-Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
+</head>
+<body>
+    <container>
+        <h1>World Clock</h1>
+        <div>
+            <label for="time-zone"></label>
+            <select id="time-zone">
+                 <option value="">Select a city</option>
+                <option value="los angeles">Los Angeles</option>
+                <option value="tokyo">Tokyo</option>
+                <option value="sydney">Syydney</option>
+            </select>
+               
+            <input type="submit" placeholder="Search" id="search-button">
+        </div>
+        <div class="city1">
+        Los Angeles <span class="LA-time">4:00pm</span>
+            <div class="LA-date">May 25th, 2023</div>
+        </div>
+        <hr>
+        <div class="city2">
+            Tokyo <span class="tokyo-time">7:00am</span>
+            <div class="tokyo-date">May 26th, 2023</div>
+        </div>
+        <hr>
+        <div class="city3">
+            Sydney <span class="sydney-time">8:00am</span>
+            <div class="sydney-date">May 26th, 2023</div>
+        </div>
+    </container>
+    <footer>
+        Coded by: Khamryn Clark view open sourced code on GitHub
+    </footer>
+    
+</body>
+<script src="index.js"></script>
+</html>
