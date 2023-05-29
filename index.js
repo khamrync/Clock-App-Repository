@@ -1,30 +1,35 @@
-// Time-Zone //
-setInterval(function () {
-  let laTime = moment().tz("America/Los_Angeles").format("LTS");
-  let laElement = document.querySelector(".LA-time");
-  laElement.innerHTML = laTime;
+//Los Angeles//
+function updateTime() {
+    let losAngelesElement = document.querySelector("#los-angeles");
+    if (losAngelesElement) {
+        let losAngelesDateElement = losAngelesElement.querySelector(".date")
+        let losAngelesTimeElement = losAngelesElement.querySelector(".time");
+        let losAngelesTime = moment().tz("America/Los_Angeles");
 
-  let tokyoTime = moment().tz("Asia/Tokyo").format("LTS");
-  let tokyoElement = document.querySelector(".tokyo-time");
-  tokyoElement.innerHTML = tokyoTime;
+        losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do YYYY");
+        losAngelesTimeElement.innerHTML = losAngelesTime.format(`LTS`);
+    };
+};
 
-  let sydneyTime = moment().tz("Australia/Sydney").format("LTS");
-  let sydneyElement = document.querySelector(".sydney-time");
-  sydneyElement.innerHTML = sydneyTime;
-}, 1000);
+function updateCity(event) {
+    let cityTimeZone = event.target.value;
+    let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+    let cityTime = moment().tz(cityTimeZone);
+    
+    let citiesElement = document.querySelector("#cities");
+    citiesElement.innerHTML = `
+    <div class="city">
+            <div>
+                <h2>${cityName}</h2>
+                <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
+            </div>
+            <div class="time">${cityTime.format(`LTS`)}</div>
+        </div>
+    `;
+}
 
-//Current Date//
-let laElementDate = moment().tz("America/Los_Angeles").format(`MMMM Do YYYY`);
+updateTime();
+setInterval(updateTime, 1000);
 
-let laDate = document.querySelector(".LA-date");
-laDate.innerHTML = laElementDate;
-
-let tokyoElementDate = moment().tz("Asia/Toyko").format(`MMMM Do YYYY`);
-
-let tokyoDate = document.querySelector(".tokyo-date");
-tokyoDate.innerHTML = tokyoElementDate;
-
-let sydneyElementDate = moment().tz("Australia/Sydney").format(`MMMM Do YYYY`);
-
-let sydneyDate = document.querySelector(".sydney-date");
-sydneyDate.innerHTML = sydneyElementDate;
+let citiesSelect = document.querySelector("#time-zone");
+citiesSelect.addEventListener("change", updateCity);

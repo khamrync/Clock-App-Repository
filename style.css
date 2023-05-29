@@ -23,49 +23,30 @@ container {
 }
 
 h1 {
-   top: 0;
-   left: 50px;
+    text-align: center;
 }
 
-.city1 {
+h2 {
+    margin: 0 0 5px;
     font-size: x-large;
-    font-style: bold;
 }
 
-.LA-time {
-    font-size: x-large;
-    right: 5px;
-    position: absolute;
-}
-
-.LA-date {
+.date {
+    opacity: 0.7;
     font-size: small;
 }
 
-.city2 {
+.city {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    border-bottom: 1px dashed grey;
+}
+.city:last-child {
+    border: none;
+}
+
+.time {
     font-size: x-large;
-}
-
-.tokyo-time {
-    font-size: x-large;
-    right: 5px;
-    position: absolute;
-}
-
-.tokyo-date {
-    font-size: small;
-}
-
-.city3 {
-    font-size: x-large;
-}
-
-.sydney-time {
-    font-size: x-large;
-    right: 5px;
-    position: absolute;
-}
-
-.sydney-date {
-    font-size: small;
+    font-weight: bold;
 }
